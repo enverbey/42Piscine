@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 12:08:52 by envyilma          #+#    #+#             */
-/*   Updated: 2022/08/28 12:08:56 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 01:41:27 by envyilma          #+#    #+#             */
+/*   Updated: 2023/02/18 01:54:57 by envyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,19 @@
 
 void	ft_print_alphabet(void)
 {
-	char	alfabe;
+	char	tmp;
 
-	alfabe = 'a';
-	while (alfabe <= 'z')
+	tmp = 'a';
+	while (tmp <= 'z')
 	{
-		write(1, &alfabe, 1);
-		alfabe++;
+		write(1, &tmp, 1);
+		tmp++;
 	}
 }
+/*
+int	main(void)
+{
+	ft_print_alphabet();
+	return (0);
+}
+*/

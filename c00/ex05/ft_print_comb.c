@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/28 12:36:25 by envyilma          #+#    #+#             */
-/*   Updated: 2022/08/28 12:36:25 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 02:03:36 by envyilma          #+#    #+#             */
+/*   Updated: 2023/02/18 02:11:49 by envyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,35 @@
 
 void	ft_print_comb(void)
 {
-	int	i;
-	int	j;
-	int	k;
+	int	x;
+	int	y;
+	int	z;
 
-	i = '0';
-	while (i <= '7')
+	x = 1;
+	while (x <= 7)
 	{
-		j = i;
-		while (++j <= '8')
+		y = x + 1;
+		while (y <= 8)
 		{
-			k = j + 1;
-			while (k <= '9')
+			z = y + 1;
+			while (z <= 9)
 			{
-				write(1, &i, 1);
-				write(1, &j, 1);
-				write(1, &k, 1);
-				if (i != '7' || j != '8' || k != '9')
-				{
+				write(1, &("0123456789")[x % 10], 1);
+				write(1, &("0123456789")[y % 10], 1);
+				write(1, &("0123456789")[z % 10], 1);
+				if (x != 7)
 					write(1, ", ", 2);
-				}
-				k++;
+				z++;
 			}
+			y++;
 		}
-		i++;
+		x++;
 	}
 }
+/*
+int	main(void)
+{
+	ft_print_comb();
+	return (0);
+}
+*/

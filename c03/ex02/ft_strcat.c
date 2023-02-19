@@ -3,30 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 14:09:32 by envyilma          #+#    #+#             */
-/*   Updated: 2022/09/07 14:09:35 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 23:50:15 by marvin            #+#    #+#             */
+/*   Updated: 2023/02/18 23:50:15 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+int ft_strlen(char *tmp)
 {
-	int	i;
-	int	j;
+    unsigned int i;
 
-	i = 0;
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	j = 0;
-	while (src[j] != '\0')
-	{
-		dest[i] = src [j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
-	return (dest);
+    i = 0;
+    while(tmp[i])
+        i++;
+    return (i);
+}
+
+char *ft_strcat(char *dest, char *src)
+{
+    unsigned int size_s;
+    unsigned int size;
+
+    size_s = ft_strlen(dest);
+    size = 0;
+    while (src[size])
+    {
+        dest[size_s + size] = src[size];
+        size++;
+    }
+    dest[size_s + size] = '\0';
+    return(dest);
 }

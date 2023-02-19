@@ -5,19 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 23:10:17 by envyilma          #+#    #+#             */
-/*   Updated: 2022/09/03 12:00:52 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 06:36:16 by envyilma          #+#    #+#             */
+/*   Updated: 2023/02/18 06:38:38 by envyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i])
 	{
 		dest[i] = src[i];
 		i++;

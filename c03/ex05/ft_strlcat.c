@@ -3,48 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 14:09:57 by envyilma          #+#    #+#             */
-/*   Updated: 2022/09/07 14:10:01 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/19 00:08:36 by marvin            #+#    #+#             */
+/*   Updated: 2023/02/19 00:08:36 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int ft_strlen(char *tmp)
 {
-	int	i;
+    unsigned int i;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+    i = 0;
+    while(tmp[i])
+        i++;
+    return (i);
 }
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	dlen;
-	unsigned int	slen;
+    int len_d;
+    int len_s;
+    int i;
 
-	i = 0;
-	j = 0;
-	while (dest[j] != '\0')
-	{
-		j++;
-	}
-	dlen = j;
-	slen = ft_strlen(src);
-	if (size == 0 || size <= dlen)
-		return (slen + size);
-	while (src [i] != '\0' && i < size - dlen - 1)
-	{
-		dest[j] = src[i];
-		i++;
-		j++;
-	}
-	dest[j] = '\0';
-	return (dlen + slen);
+    len_d = ft_strlen(dest);
+    len_s = ft_strlen(src);
+    if (size == 0 || size <= len_d)
+        return (len_s + size);
+    while (src[i] && i < size - len_d - 1)
+    {
+        dest[len_d + i] = src[i];
+        i++;
+    }
+    dest[len_d + i] = '\0';
+    return (len_d + len_s);
 }

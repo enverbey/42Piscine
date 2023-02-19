@@ -5,24 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/03 02:00:24 by envyilma          #+#    #+#             */
-/*   Updated: 2022/09/03 17:26:19 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 06:54:28 by envyilma          #+#    #+#             */
+/*   Updated: 2023/02/18 06:55:13 by envyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i] != 0)
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-		{
-			str[i] += 32;
-		}
+		if ((str[i] >= 'A') && (str[i] <= 'Z'))
+			str[i] = str[i] + 32;
 		i++;
 	}
 	return (str);

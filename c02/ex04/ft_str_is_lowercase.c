@@ -5,24 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 23:40:36 by envyilma          #+#    #+#             */
-/*   Updated: 2022/09/03 17:24:54 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 06:45:18 by envyilma          #+#    #+#             */
+/*   Updated: 2023/02/18 06:46:40 by envyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 int	ft_str_is_lowercase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 	{
-		if (!(str[i] >= 'a' && str[i] <= 'z'))
-		{
+		if (str[i] < 'a' || str[i] > 'z')
 			return (0);
-		}
 		i++;
 	}
 	return (1);

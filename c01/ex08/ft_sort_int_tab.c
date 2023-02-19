@@ -5,33 +5,41 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 12:45:23 by envyilma          #+#    #+#             */
-/*   Updated: 2022/08/31 12:51:54 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 05:33:41 by envyilma          #+#    #+#             */
+/*   Updated: 2023/02/18 05:42:28 by envyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 void	ft_sort_int_tab(int *tab, int size)
 {
-	int	x;
-	int	y;
-	int	swp;
+	int	i;
+	int	j;
+	int	tmp;
 
-	x = 0;
-	while (x < size)
+	i = 0;
+	while (i < size - 1)
 	{
-		y = x + 1;
-		while (y < size)
+		j = i + 1;
+		while (j <= size - 1)
 		{
-			if (tab[x] > tab[y])
+			if (tab[i] > tab[j])
 			{
-				swp = tab[x];
-				tab[x] = tab[y];
-				tab[y] = swp;
+				tmp = tab[i];
+				tab[i] = tab[j];
+				tab[j] = tmp;
 			}
-			y++;
+			j++;
 		}
-		x++;
+		i++;
 	}
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	int tab[] = {10, 7, 8, 9, 1, 5};
+	ft_sort_int_tab(tab, 6);
+	printf("%d, %d, %d, %d, %d, %d",tab[0], tab[1], tab[2], tab[3], tab[4], tab[5]);
+}
+*/

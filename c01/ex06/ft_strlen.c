@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*    ft_strlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 20:04:59 by envyilma          #+#    #+#             */
-/*   Updated: 2022/08/30 20:13:05 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 05:22:36 by envyilma          #+#    #+#             */
+/*   Updated: 2023/02/18 05:24:51 by envyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 int	ft_strlen(char *str)
 {
-	int	x;
+	int	i;
 
-	x = 0;
-	while (str[x] != '\0')
-	{
-		x++;
-	}
-	return (x);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	int	len;
+
+	len = ft_strlen("rıewgfıulqeof");
+	printf("%d", len);
+}
+*/

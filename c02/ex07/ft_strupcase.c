@@ -5,24 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 23:58:20 by envyilma          #+#    #+#             */
-/*   Updated: 2022/09/03 17:26:02 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 06:52:42 by envyilma          #+#    #+#             */
+/*   Updated: 2023/02/18 06:54:10 by envyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 char	*ft_strupcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i] != 0)
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			str[i] -= 32;
-		}
+		if ((str[i] >= 'a') && (str[i] <= 'z'))
+			str[i] = str[i] - 32;
 		i++;
 	}
 	return (str);

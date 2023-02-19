@@ -3,30 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 14:09:50 by envyilma          #+#    #+#             */
-/*   Updated: 2022/09/07 14:09:51 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/19 00:02:24 by marvin            #+#    #+#             */
+/*   Updated: 2023/02/19 00:02:24 by marvin           ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/* *******************[******************************************************* */
 
-char	*ft_strstr(char *str, char *to_find)
+char *ft_strstr(char *str, char *to_find)
 {
-	int	i;
-	int	j;
+    int i;
+    int k;
 
-	i = 0;
-	j = 0;
-	if (to_find[j] == '\0')
-		return (str);
-	while (str[i] != '\0')
-	{
-		while (str[i + j] == to_find[j] && str[i + j] != '\0')
-			j++;
-		if (to_find[j] == '\0')
-			return (str + i);
-		i++;
-		j = 0;
-	}
-	return (0);
+    if (to_find[0] == '\0')
+        return (str);
+    i = 0;
+    while (str[i])
+    {
+        k = 0;
+        while (str[i + k] == to_find[k])
+            k++;
+        if (to_find[k] == '\0')
+            return (str + i);
+        i++;
+    }
+    return (0);
 }

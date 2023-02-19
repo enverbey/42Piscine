@@ -3,40 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/06 16:32:03 by envyilma          #+#    #+#             */
-/*   Updated: 2022/09/07 14:24:17 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 23:24:42 by marvin            #+#    #+#             */
+/*   Updated: 2023/02/18 23:24:42 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 int	ft_strlen(char *str)
 {
-	int	i;
+	int	size;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	size = 0;
+	while (str[size])
+		size++;
+	return (size);
 }
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
-	unsigned int	x;
+	unsigned int	return_size;
 
-	x = ft_strlen(src);
+	return_size = ft_strlen(src);
 	i = 0;
 	if (size != 0)
 	{
-		while (src [i] != '\0' && i < size - 1)
+		while (src[i] != '\0' && i < size -1)
 		{
 			dest[i] = src[i];
 			i++;
 		}
 		dest[i] = '\0';
 	}
-	return (x);
+	return (return_size);
 }

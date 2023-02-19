@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*    ft_print_numbers.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/25 11:28:46 by envyilma          #+#    #+#             */
-/*   Updated: 2022/08/25 11:28:46 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 01:53:06 by envyilma          #+#    #+#             */
+/*   Updated: 2023/02/18 02:00:57 by envyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,19 @@
 
 void	ft_print_numbers(void)
 {
-	char	number;
+	int	i;
 
-	number = '0';
-	while (number <= '9')
+	i = 0;
+	while (i <= 9)
 	{
-		write(1, &number, 1);
-		number++;
+		write(1, &("0123456789")[i % 10], 1);
+		i++;
 	}
 }
+/*
+int	main(void)
+{
+	ft_print_numbers();
+	return (0);
+}
+*/

@@ -5,24 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 23:48:29 by envyilma          #+#    #+#             */
-/*   Updated: 2022/09/02 23:49:37 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 06:47:07 by envyilma          #+#    #+#             */
+/*   Updated: 2023/02/18 06:48:43 by envyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 int	ft_str_is_uppercase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 	{
-		if (!(str[i] >= 'A' && str[i] <= 'Z'))
-		{
+		if (str[i] < 'A' || str[i] > 'Z')
 			return (0);
-		}
 		i++;
 	}
 	return (1);

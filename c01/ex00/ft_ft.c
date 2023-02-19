@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/29 10:38:35 by envyilma          #+#    #+#             */
-/*   Updated: 2022/08/30 17:38:59 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 04:58:45 by envyilma          #+#    #+#             */
+/*   Updated: 2023/02/18 05:01:59 by envyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,12 @@ void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }
+/*
+#include <stdio.h>
+int	main()
+{
+	int nbr[1];
+	ft_ft(nbr);
+	printf("%d",nbr[0]);
+}
+*/

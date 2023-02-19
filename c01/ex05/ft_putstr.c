@@ -5,26 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/29 10:57:11 by envyilma          #+#    #+#             */
-/*   Updated: 2022/08/31 12:45:16 by envyilma         ###   ########.fr       */
+/*   Created: 2023/02/18 05:18:34 by envyilma          #+#    #+#             */
+/*   Updated: 2023/02/18 05:22:01 by envyilma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 void	ft_putstr(char *str)
 {
-	int	x;
+	int	i;
 
-	x = 0;
-	while (str[x] != '\0')
+	i = 0;
+	while (str[i])
 	{
-		ft_putchar(str[x]);
-		x++;
+		write(1, &str[i], 1);
+		i++;
 	}
 }
+/*
+int		main(void)
+{
+	char *str = "Hello, world!";
+
+	ft_putstr(str);
+}
+*/
