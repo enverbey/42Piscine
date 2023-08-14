@@ -1,4 +1,4 @@
-# My Stats at 42-Piscine
+# 42-Piscine
 <br>
 <table>
  <tr>
