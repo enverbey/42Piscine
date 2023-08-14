@@ -72,7 +72,6 @@
   <td><a href="https://github.com/JaeSeoKim/badge42"><img src="https://badge42.vercel.app/api/v2/cl98yj9fr00110gl4jaf8915e/project/2770288" alt="cbolat's 42 C Piscine Exam 02 Score" /></a></td>
  </tr>
      <tr>
-  <td><b>FINAL</b></td>
   <td><b>FINAL EXAM</b></td>
   <td><b>---</b></td>
   <td><a href="https://github.com/JaeSeoKim/badge42"><img src="https://badge42.vercel.app/api/v2/cl98yj9fr00110gl4jaf8915e/project/2788462" alt="cbolat's 42 C Piscine Final Exam Score" /></a></td>
