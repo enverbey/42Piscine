@@ -4,7 +4,7 @@
  <tr>
   <td><b>##</b></td>
   <td><b>Name</b></td>
-  <td><b>Directory</b></td>
+  <td><b>Completion Status ✅</b></td>
   <td><b>Exercises</b></td>
  </tr>
  <tr>
