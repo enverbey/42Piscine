@@ -1,1 +1,1 @@
-<a href="https://github.com/enverbey/42-Piscine/files/12334624/C00.readme.pdf">subject-C00</a>
+<strog><a href="https://github.com/enverbey/42-Piscine/files/12334624/C00.readme.pdf">subject-C00</a></strong>
