@@ -51,7 +51,7 @@
  </tr>
     <tr>
   <td><b>EXAM 00</b></td>
-  <td><b style="color: green;">0/0</b></td>
+  <td><b style="color: red;">0/0</b></td>
  </tr>
      <tr>
   <td><b>EXAM 01</b></td>
