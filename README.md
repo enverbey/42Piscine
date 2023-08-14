@@ -59,7 +59,7 @@
  </tr>
      <tr>
   <td><b>EXAM 02</b></td>
-  <td><b style="color:red;">0/0</b></td>
+  <td><b>0/0</b></td>
  </tr>
      <tr>
   <td><b>FINAL EXAM</b></td>
