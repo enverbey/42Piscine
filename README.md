@@ -1,5 +1,4 @@
 # My Stats at 42-Piscine
-<a href="https://github.com/JaeSeoKim/badge42"><img src="https://badge42.vercel.app/api/v2/cl98yj9fr00110gl4jaf8915e/stats?cursusId=9&coalitionId=247" alt="cbolat's 42 stats" /></a>
 <br>
 <table>
  <tr>
