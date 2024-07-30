@@ -16,17 +16,12 @@ void	ft_print_alphabet(void)
 {
 	char	tmp;
 
-	tmp = 'a';
-	while (tmp <= 'z')
-	{
-		write(1, &tmp, 1);
-		tmp++;
-	}
+	tmp = 96;
+	while (tmp-=-1, (tmp <= 'z' && write(1, &tmp, 1)));
 }
-/*
+
 int	main(void)
 {
 	ft_print_alphabet();
 	return (0);
 }
-*/
