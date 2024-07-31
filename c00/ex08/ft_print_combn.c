@@ -3,78 +3,69 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_combn.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: enveryilmaz <enveryilmaz@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 18:47:45 by envyilma          #+#    #+#             */
-/*   Updated: 2023/07/29 04:32:17 by envyilma         ###   ########.fr       */
+/*   Updated: 2024/07/31 23:59:58 by enveryilmaz      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//BİTMEDİ
+/* **************************** [v] INCLUDES [v] **************************** */
+#include <unistd.h> /*
+#ssize_t write(int __fd, const void *__buf, size_t __nbyte)
+#        */
+/* **************************** [v] INCLUDES [v] **************************** */
 
-#include <unistd.h>
-
-void	ft_write(int i, int *tmp)
+void	ft_putchar(char c)
 {
-	write(1, &("0123456789")[tmp[i] % 10], 1);
+	write(1, &c, sizeof(char));
 }
 
-int	enver(int *tmp, int n)
+void	ft_putout(int n, int *arr, int flag)
 {
 	int	i;
-	int	x;
-	int k;
 
-	k = 1;
+	if (flag == 1)
+		write(1, ", ", 2);
 	i = 0;
-	while(k <= n)
-	{
-		while (tmp[i] < n - 1)
-		{
-			if (tmp[i + 1] > tmp[i])
-				i++;
-			else
-				tmp[i + 1] = tmp[i + 1] + 1;
-		}
-		ft_write(i, tmp);
-		k++;
-		i++;
-	}
-	i = 0;
-	x = 0;
-	
-	/*while (x < n)
-	{
-		write(1, &("0123456789")[tmp[i] % 10], 1);
-		i++;
-		x++;
-	}*/
-	write(1, ", ", 1);
-	return (tmp[0]);
+	while (i < n)
+		ft_putchar(arr[i++] + '0');
+}
+
+void	ft_print_comb_increment(int n, int *arr)
+{
+	int	i;
+	int	max;
+
+	max = 9;
+	i = n - 1;
+	while (arr[i--] == max--)
+		;
+	arr[i++] += 1;
+	while (i++ < n)
+		arr[i] = arr[i - 1] + 1;
 }
 
 void	ft_print_combn(int n)
 {
-	int	tmp[11];
+	int	arr[10];
 	int	i;
-	int	key;
 
-	i = 0;
-	while (i <= n)
+	i = -1;
+	while (++i < n)
+		arr[i] = i;
+	ft_putout(n, arr, 0);
+	while (arr[0] != 10 - n || arr[n - 1] != 9)
 	{
-		tmp[i] = i;
-		i++;
-	}
-	tmp[i] = 42;
-	key = enver(tmp, n);
-	while (key != (10 - n))
-	{
-		tmp[n - 1] += 1;
-		key = enver(&tmp[0], n);
+		if (arr[n - 1] != 9)
+			arr[n - 1] += 1;
+		else
+			ft_print_comb_increment(n, arr);
+		ft_putout(n, arr, 1);
 	}
 }
 
 int	main(void)
 {
-	ft_print_combn(2);
+	ft_print_combn(3);
 }

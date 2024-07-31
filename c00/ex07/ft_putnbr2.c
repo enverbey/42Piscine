@@ -1,16 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   (option 2)ft_putnbr.c                              :+:      :+:    :+:   */
+/*   ft_putnbr2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: enveryilmaz <enveryilmaz@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 18:47:45 by envyilma          #+#    #+#             */
-/*   Updated: 2023/02/25 20:14:57 by marvin           ###   ########.fr       */
+/*   Updated: 2024/07/31 23:54:28 by enveryilmaz      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/* **************************** [v] INCLUDES [v] **************************** */
+#include <unistd.h> /*
+#ssize_t write(int __fd, const void *__buf, size_t __nbyte)
+#        */
+/* **************************** [v] INCLUDES [v] **************************** */
 
 void	ft_putnbr(int nb)
 {
@@ -27,7 +31,7 @@ void	ft_putnbr(int nb)
 	}
 	else if (nb < 0 && key != 1)
 	{
-		write(1, "-", 1);
+		write(1, "-", sizeof(char));
 		ft_putnbr(-nb);
 	}
 	while (nb >= 10)
@@ -37,9 +41,9 @@ void	ft_putnbr(int nb)
 	}
 	tmp[i] = nb % 10;
 	while (i >= 0)
-		write(1, &("0123456789")[tmp[i--] % 10], 1);
+		write(1, &("0123456789")[tmp[i--] % 10], sizeof(char));
 }
-/*
+
 int	main(void)
 {
 	ft_putnbr(-2147483648);
@@ -51,6 +55,6 @@ int	main(void)
 	ft_putnbr(5151365);
 	write(1, "\n", 1);
 	ft_putnbr(42);
-	//:D Kolay gelsin
+	write(1, "\n", 1);
 }
-*/
+//:D Kolay gelsin

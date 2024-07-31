@@ -3,25 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: enveryilmaz <enveryilmaz@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 01:41:27 by envyilma          #+#    #+#             */
-/*   Updated: 2023/02/18 01:54:57 by envyilma         ###   ########.fr       */
+/*   Updated: 2024/07/31 23:53:32 by enveryilmaz      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/* **************************** [v] INCLUDES [v] **************************** */
+#include <unistd.h> /*
+#ssize_t write(int __fd, const void *__buf, size_t __nbyte)
+#        */
+/* **************************** [v] INCLUDES [v] **************************** */
 
 void	ft_print_alphabet(void)
 {
 	char	tmp;
 
-	tmp = 96;
-	while (tmp-=-1, (tmp <= 'z' && write(1, &tmp, 1)));
+	tmp = 97;
+	while (tmp <= 'z' && write(1, &tmp, sizeof(char)))
+		tmp -= -1;
 }
 
 int	main(void)
 {
-	ft_print_alphabet();
-	return (0);
+	return (ft_print_alphabet(), 0);
 }

@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: enveryilmaz <enveryilmaz@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 02:03:36 by envyilma          #+#    #+#             */
-/*   Updated: 2023/07/29 04:29:06 by envyilma         ###   ########.fr       */
+/*   Updated: 2024/07/31 23:03:22 by enveryilmaz      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/* **************************** [v] INCLUDES [v] **************************** */
+#include <unistd.h> /*
+#ssize_t write(int __fd, const void *__buf, size_t __nbyte)
+#        */
+/* **************************** [v] INCLUDES [v] **************************** */
 
 void	ft_print_comb(void)
 {
@@ -27,11 +31,11 @@ void	ft_print_comb(void)
 			z = y + 1;
 			while (z <= 9)
 			{
-				write(1, &("0123456789")[x % 10], 1);
-				write(1, &("0123456789")[y % 10], 1);
-				write(1, &("0123456789")[z % 10], 1);
+				write(1, &("0123456789")[x % 10], sizeof(char));
+				write(1, &("0123456789")[y % 10], sizeof(char));
+				write(1, &("0123456789")[z % 10], sizeof(char));
 				if (x != 7)
-					write(1, ", ", 2);
+					write(1, ", ", sizeof(char) * 2);
 				z++;
 			}
 			y++;
@@ -39,10 +43,9 @@ void	ft_print_comb(void)
 		x++;
 	}
 }
-/*
+
 int	main(void)
 {
 	ft_print_comb();
 	return (0);
 }
-*/
