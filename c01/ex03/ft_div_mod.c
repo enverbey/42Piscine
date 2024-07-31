@@ -3,31 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: enveryilmaz <enveryilmaz@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 05:10:40 by envyilma          #+#    #+#             */
-/*   Updated: 2023/02/18 05:13:38 by envyilma         ###   ########.fr       */
+/*   Updated: 2024/08/01 00:20:33 by enveryilmaz      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
+	if (b == 0)
+		return ;
 	*div = a / b;
 	*mod = a % b;
 }
-/*
-#include <stdio.h>
-int		main(void)
-{
-	int a  = 5;
-	int b  = 2;
-	int *div = &a;
-	int *mod = &b;
-
-	ft_div_mod(a, b, div, mod);
-	printf("%d",*div);
-	printf("\n%d",*mod);
-}
-*/

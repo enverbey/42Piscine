@@ -3,31 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: envyilma <envyilma@student.42.fr>          +#+  +:+       +#+        */
+/*   By: enveryilmaz <enveryilmaz@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 05:18:34 by envyilma          #+#    #+#             */
-/*   Updated: 2023/02/18 05:22:01 by envyilma         ###   ########.fr       */
+/*   Updated: 2024/08/01 00:24:39 by enveryilmaz      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/* **************************** [v] INCLUDES [v] **************************** */
+#include <unistd.h> /*
+#ssize_t write(int, const void *, size_t);
+#        */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 void	ft_putstr(char *str)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
+	while (*str)
+		write(1, str++, sizeof(char));
 }
-/*
-int		main(void)
-{
-	char *str = "Hello, world!";
 
+int	main(void)
+{
+	char	*str;
+
+	str = "Hello, world!";
 	ft_putstr(str);
 }
-*/
