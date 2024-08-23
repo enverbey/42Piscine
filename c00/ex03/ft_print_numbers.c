@@ -14,7 +14,7 @@
 #include <unistd.h> /*
 #ssize_t write(int __fd, const void *__buf, size_t __nbyte)
 #        */
-/* **************************** [v] INCLUDES [v] **************************** */
+/* **************************** [^] INCLUDES [^] **************************** */
 
 void	ft_print_numbers(void)
 {
