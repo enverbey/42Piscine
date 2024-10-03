@@ -52,7 +52,6 @@ Hoş geldiniz! 👋 Bu repoda, Ecole 42 havuz sürecinde tamamladığım projele
 
 ## 📚 **Referanslar**
 
-- [Cplusplus.com](https://cplusplus.com)
 - [C Programming](https://www.cprogramming.com)
 
 ---
